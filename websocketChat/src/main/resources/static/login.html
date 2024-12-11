@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>登录</title>
+    <title>登入</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords"
@@ -29,18 +29,18 @@
 </div>
 <div class="main-content-agile" id="app">
     <div class="sub-main-w3">
-        <h2>登录</h2>
+        <h2>登入</h2>
         <form id="loginForm">
             <div class="icon1">
-                <input placeholder="用户名" id="username" v-model="user.username" type="text"/>
+                <input placeholder="用戶名稱" id="username" v-model="user.username" type="text"/>
             </div>
 
             <div class="icon2">
-                <input placeholder="密码" id="password" v-model="user.password" type="password"/>
+                <input placeholder="密碼" id="password" v-model="user.password" type="password"/>
             </div>
 
             <div class="clear"></div>
-            <input type="button" id="btn1" @click="login" value="登录"/>
+            <input type="button" id="btn1" @click="login" value="登入"/>
 			<div class="icon1">
                 <span id="err_msg" style="color: red; ">{{errMessage}}</span>
             </div>
@@ -64,7 +64,7 @@
         methods: {
             login() {
                 axios.post("http://localhost/user/login",this.user).then(res => {
-                    //判断登陆是否成功
+                    //判斷登入是否成功
                     if(res.data.flag) {
                         location.href = "main.html"
                     } else {

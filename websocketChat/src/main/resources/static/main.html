@@ -32,23 +32,23 @@
     <div class="abs cover pnl">
         <div class="top pnl-head" style="padding: 20px ; color: white;">
             <div id="userName">
-                用户：{{username}}
-                <span style='float: right;color: green' v-if="isOnline">在线</span>
-                <span style='float: right;color: red' v-else>离线</span>
+                用戶：{{username}}
+                <span style='float: right;color: green' v-if="isOnline">在線上</span>
+                <span style='float: right;color: red' v-else>已離線</span>
             </div>
             <div id="chatMes" v-show="chatMes" style="text-align: center;color: #6fbdf3;font-family: 新宋体">
                 正在和 <font face="楷体">{{toName}}</font> 聊天
             </div>
         </div>
-        <!--聊天区开始-->
+        <!--聊天區開始-->
         <div class="abs cover pnl-body" id="pnlBody">
             <div class="abs cover pnl-left" id="initBackground" style="background-color: white; width: 100%">
                 <div class="abs cover pnl-left" id="chatArea" v-show="isShowChat">
                     <div class="abs cover pnl-msgs scroll" id="show">
-                        <div class="pnl-list" id="hists"><!-- 历史消息 --></div>
+                        <div class="pnl-list" id="hists"><!-- 歷史消息 --></div>
                         <div class="pnl-list" id="msgs" v-for="message in historyMessage">
 
-                            <!-- 消息这展示区域 -->
+                            <!-- 消息這展示區域 -->
                             <div class="msg guest" v-if="message.toName">
                                 <div class="msg-right">
                                     <div class="msg-host headDefault"></div>
@@ -67,7 +67,7 @@
 
                     <div class="abs bottom pnl-text">
                         <div class="abs cover pnl-input">
-                            <textarea class="scroll" id="context_text" @keyup.enter="submit" wrap="hard" placeholder="在此输入文字信息..."
+                            <textarea class="scroll" id="context_text" @keyup.enter="submit" wrap="hard" placeholder="在此輸入文字訊息..."
                                       v-model="sendMessage.message"></textarea>
                             <div class="abs atcom-pnl scroll hide" id="atcomPnl">
                                 <ul class="atcom" id="atcom"></ul>
@@ -76,12 +76,12 @@
 
                         <div class="abs br pnl-btn" id="submit" @click="submit"
                              style="background-color: rgb(32, 196, 202); color: rgb(255, 255, 255);">
-                            发送
+                            發送
                         </div>
                     </div>
                 </div>
 
-                <!--聊天区 结束-->
+                <!--聊天區 結束-->
                 <div class="abs right pnl-right">
                     <div class="slider-container hide"></div>
                     <div class="pnl-right-content">
@@ -98,12 +98,12 @@
 
                     <div class="pnl-right-content">
                         <div class="pnl-tabs">
-                            <div class="tab-btn active">系统广播</div>
+                            <div class="tab-btn active">系統廣播</div>
                         </div>
                         <div class="pnl-hot">
                             <ul class="rel-list unselect" id="broadcastList">
                                 <li class="rel-item" style="color: #9d9d9d;font-family: 宋体" v-for="name in systemMessages">您的好友
-                                    {{name}} 已上线</li>
+                                    {{name}} 已上線</li>
                             </ul>
                         </div>
                     </div>

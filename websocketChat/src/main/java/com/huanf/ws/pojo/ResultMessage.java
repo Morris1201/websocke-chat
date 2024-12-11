@@ -3,12 +3,12 @@ package com.huanf.ws.pojo;
 import lombok.Data;
 
 /**
- * 用来封装服务端给浏览器发送的消息数据
+ * 用來封裝服務端給瀏覽器發送的消息數據
  */
 @Data
 public class ResultMessage {
 
     private boolean isSystem;
     private String fromName;
-    private Object message;//如果是系统消息是数组
+    private Object message;//如果是系統消息數據
 }

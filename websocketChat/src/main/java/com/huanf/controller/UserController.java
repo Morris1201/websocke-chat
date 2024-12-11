@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 public class UserController {
 
     /**
-     * 登陆
-     * @param user 提交的用户数据，包含用户名和密码
+     * 登入
+     * @param user 提交的用戶資訊，包含用戶名和密碼
      * @param session
      * @return
      */
@@ -21,17 +21,17 @@ public class UserController {
         Result result = new Result();
         if(user != null && "123".equals(user.getPassword())) {
             result.setFlag(true);
-            //将数据存储到session对象中
+            // 將數據存取到session對象中
             session.setAttribute("user",user.getUsername());
         } else {
             result.setFlag(false);
-            result.setMessage("登陆失败");
+            result.setMessage("登入失敗");
         }
         return result;
     }
 
     /**
-     * 获取用户名
+     * 獲取用戶名
      * @param session
      * @return
      */

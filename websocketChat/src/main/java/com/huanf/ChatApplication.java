@@ -11,18 +11,17 @@ public class ChatApplication {
     }
 
     /**
-     * 背景介绍:
+     * 1、登入的用戶名是任意的，密碼是123。
      *
-     * 1、登录的用户名是任意的，密码是123。
-     * 用户登录成功之后，就会把session数据(也就是用户数据)，其中写死user字符串作为key存入GetHttpSessionConfig类的ServerEndpointConfig集合(是Map集合)里面
-     * 然后在ChatEndpoint类，根据user字符串取出该用户对应的session数据，把这个session数据再存入的httpSession变量，
-     * 然后从httpSession变量里面再存入onlineUsers变量，此时onlineUsers变量里面有数据的话，就说明有在在线用户，就会通过'系统通知'在线用户列表数据传给前端
+     * 用戶登入成功之後，會將session資料（也就是用戶資料），其中寫死"user"字串作為key存入GetHttpSessionConfig類別的ServerEndpointConfig集合（是Map集合）裡面，
+     * 然後在ChatEndpoint類別，根據"user"字串取出該用戶對應的session資料，把這個session資料再存入httpSession變數，
+     * 然後從httpSession變數裡面再存入onlineUsers變數，此時onlineUsers變數裡面有資料的話，就說明有在線用戶，就會通過'系統通知'在線用戶列表資料傳給前端。
      *
-     * 2、可以跟在线的用户进行私聊，双方的数据是通过'非系统通知'在线用户列表数据传给前端
+     * 2、可以跟在線的用戶進行私聊，雙方的資料是通過'非系統通知'在線用戶列表資料傳給前端。
      *
-     * 3、运行启动类，使用两个不同浏览器分别访问 http://localhost/login.html，密码123，用户名任意，然后就可以聊天了
+     * 3、運行啟動類，使用兩個不同瀏覽器分別訪問 http://localhost/login.html，密碼123，用戶名稱任意，然後就可以聊天了。
      *
-     * 4、没有数据库，数据是存储在请求内存里的。刷新网页之后数据还在，但是重启SpringBoot之后数据就没了
+     * 4、沒有資料庫，資料是存儲在請求內存裡的。刷新網頁之後資料還在，但是重啟SpringBoot之後資料就沒了。
      */
 
 }
